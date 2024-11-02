@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@config/*": ["src/config/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@routes/*": ["src/routes/*"],
+      "@models/*": ["src/models/*"],
+      "@repositories/*": ["src/repositories/*"],
+      "@services/*": ["src/services/*"],
+      "@usecases/*": ["src/usecases/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@schemas/*": ["src/schemas/*"],
+      "@commons/*": ["src/commons/*"],
+      "@dto/*": ["src/dto/*"]
+    }
+  }
+}
