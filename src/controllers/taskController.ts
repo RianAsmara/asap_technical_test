@@ -31,8 +31,19 @@ class TaskController {
 
   async createTask(req: Request, res: Response) {
     try {
-      const task = await taskService.createTask(req.body);
-      res.status(201).json({ success: true, message: 'Task created successfully', data: task });
+      const { title, description, dueDate, status } = req.body;
+      const task = await taskService.createTask({
+        title,
+        description,
+        dueDate: new Date(dueDate),
+        status
+      });
+
+      res.status(201).json({
+        success: true,
+        message: 'Task created successfully',
+        data: task
+      });
     } catch (err) {
       responseWithError(res, err);
     }

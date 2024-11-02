@@ -17,7 +17,9 @@ export class Task {
   @Column()
   description!: string;
 
-  @Column()
+  @Column({
+    type: 'date',
+  })
   dueDate!: Date;
 
   @Column()
